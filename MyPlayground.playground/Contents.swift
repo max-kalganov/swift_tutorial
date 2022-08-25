@@ -46,3 +46,19 @@ else{
     print("int constant is bigger than 10")
 }
 
+// switch
+
+let value = "d"
+
+switch value{
+case "a":
+    print("value is a")
+case "b", "c":
+    print("value is b or c")
+default:
+    print("default case in switch")
+}
+
+
+
+
