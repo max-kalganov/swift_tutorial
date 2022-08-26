@@ -255,3 +255,31 @@ var dog1 = Dog()
 var dog2 = Dog("Rob", 20)
 
 
+// Arrays ----------------------
+
+var animals:[String] = ["Dog", "Cat", "Bird"]
+
+
+for single_animal in animals {
+    print("My " + single_animal)
+}
+
+for animal_id in 0...animals.count - 1 {
+    animals[animal_id] = "My " + animals[animal_id]
+}
+print(animals)
+
+animals.append("Jiraffe")
+animals += ["Frog", "Bear"]
+animals.insert("Lion", at: 1)
+
+print(animals)
+
+animals.remove(at: 0)
+
+print(animals.firstIndex(of: "Lion")!)
+
+print(animals)
+
+
+
