@@ -282,4 +282,21 @@ print(animals.firstIndex(of: "Lion")!)
 print(animals)
 
 
+// Dictionaries ----------------------
 
+var library = [String: String]()
+
+library["book_name"] = "book text"
+
+print(library["book_name"]!, library["not a book name"])
+
+library["book_name"] = nil // removing value from dict
+ 
+library["book1"] = "book1 text"
+library["book2"] = "book2 text"
+library["book3"] = "book3 text"
+
+
+for (book_name, book_text) in library{
+    print("book: name - \(book_name), text - \(book_text)")
+}
