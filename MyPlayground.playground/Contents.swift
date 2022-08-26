@@ -203,7 +203,7 @@ if present == nil{
     print("no present")
 }
 else{
-    // '!' is unwrappig object. When using it there is no type safe check. It's assumed that you now what is inside 
+    // '!' is unwrappig object. When using it there is no type safe check. It's assumed that you now what is inside
     print("present: \(present!.surprise())")
 }
 
@@ -215,3 +215,22 @@ if let actual_present = present {
 
 // if present is not nil surprise will be executed
 present?.surprise()
+
+// Calculated properties
+
+class LargeXmasPresent{
+    var person_age: Int = 1
+    var present_size: Int {
+        return person_age * (-1) + 5
+    }
+    func surprise() -> Int{
+        return Int.random(in: self.present_size...self.present_size+5)
+    }
+}
+
+var large_present: LargeXmasPresent = LargeXmasPresent()
+print(large_present.person_age, large_present.present_size, large_present.surprise())
+
+large_present.person_age = 3
+print(large_present.person_age, large_present.present_size, large_present.surprise())
+
