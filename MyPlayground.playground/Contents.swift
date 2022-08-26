@@ -234,3 +234,24 @@ print(large_present.person_age, large_present.present_size, large_present.surpri
 large_present.person_age = 3
 print(large_present.person_age, large_present.present_size, large_present.surprise())
 
+
+class Dog{
+    var name: String
+    var height: Int?
+    
+    init(){
+        name = "Bob"
+    }
+    
+    convenience init(_ name: String, _ height: Int){
+        self.init()
+        
+        self.name = name
+        self.height = height
+    }
+}
+
+var dog1 = Dog()
+var dog2 = Dog("Rob", 20)
+
+
