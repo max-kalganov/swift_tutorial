@@ -132,3 +132,20 @@ me.role = "IT"
 print(me.name, me.role, me.age)
 print("Next year age -  \(me.get_next_year_age())")
 
+
+// Inheritance
+class Manager: Employee{
+    var team_size: Int = 0
+    override func get_next_year_age() -> Int{
+        let next_year_age: Int = super.get_next_year_age()
+        print("Managers next year is \(next_year_age)")
+        return next_year_age
+    }
+}
+
+var my_manager: Manager = Manager()
+my_manager.age = 30
+my_manager.name = "Tom"
+my_manager.role = "Manager"
+
+print(my_manager.name, my_manager.role, my_manager.age, my_manager.get_next_year_age())
