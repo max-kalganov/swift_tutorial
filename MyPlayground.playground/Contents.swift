@@ -87,3 +87,26 @@ repeat{
 print("Repeat-While loop has stopped")
 
 
+// Functions -----------------------
+
+func print_hello(){
+    print("hello")
+}
+
+print_hello()
+
+func sum_values(val1: Int, val2: Int) -> Int{
+    return val1 + val2
+}
+
+let a = 3
+let b = 5
+print(a, b, sum_values(val1: a, val2: b))
+
+func sum_values_with_arg_labels(val1_to_be_summed val1: Int, val2_to_be_summed val2: Int) -> Int{
+    return sum_values(val1: val1, val2: val2)
+}
+
+let a2 = 4
+let b2 = 9
+print(a2, b2, sum_values_with_arg_labels(val1_to_be_summed: a2, val2_to_be_summed: b2))
