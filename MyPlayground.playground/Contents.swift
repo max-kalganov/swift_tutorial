@@ -149,3 +149,32 @@ my_manager.name = "Tom"
 my_manager.role = "Manager"
 
 print(my_manager.name, my_manager.role, my_manager.age, my_manager.get_next_year_age())
+
+
+// Initializer ------------------------
+
+class Person {
+    var name: String = ""
+    
+    init(){
+        self.name = "default name"
+    }
+    
+    init(_ name: String){
+        self.name = "empty arg label init"
+    }
+    
+    init(person_name name: String){
+        self.name = name
+    }
+}
+
+var tom = Person(person_name: "Tom")
+var neither_person = Person()
+var empty_arg_person = Person("Mark")
+
+print("tom name = \(tom.name)")
+print("neither name = \(neither_person.name)")
+print("empty_arg_person name = \(empty_arg_person.name)")
+
+
