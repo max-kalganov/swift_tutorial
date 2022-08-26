@@ -110,3 +110,25 @@ func sum_values_with_arg_labels(val1_to_be_summed val1: Int, val2_to_be_summed v
 let a2 = 4
 let b2 = 9
 print(a2, b2, sum_values_with_arg_labels(val1_to_be_summed: a2, val2_to_be_summed: b2))
+
+
+// Classes ------------------------
+
+class Employee{
+    var name: String = ""
+    var role: String = ""
+    var age: Int = 0
+    
+    func get_next_year_age() -> Int{
+        return age + 1
+    }
+}
+
+var me = Employee()
+me.age = 24
+me.name = "Max"
+me.role = "IT"
+
+print(me.name, me.role, me.age)
+print("Next year age -  \(me.get_next_year_age())")
+
