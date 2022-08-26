@@ -60,5 +60,30 @@ default:
 }
 
 
+// Loops ---------------------
+
+for _ in 1...5 {
+    print("hello")
+}
+
+var sum = 0
+for counter in 1...5 {
+    sum += counter
+    print("sum = ", sum)
+}
+
+
+var counter: Int = 0
+while counter <= 5 {
+    counter += 1
+}
+print("While loop has stopped")
+
+counter = 0
+repeat{
+    counter += 1
+    print("Counter value = ", counter)
+}while counter < 5
+print("Repeat-While loop has stopped")
 
 
