@@ -178,3 +178,40 @@ print("neither name = \(neither_person.name)")
 print("empty_arg_person name = \(empty_arg_person.name)")
 
 
+// Empty variables
+
+var string_empty_var: String? = nil
+var int_empty_var: Int? = nil
+var double_empty_var: Double? // nil by default
+
+
+print(string_empty_var)
+string_empty_var = "non empty string"
+print(string_empty_var)
+
+
+
+class XmasPresent{
+    func surprise() -> Int{
+        return Int.random(in: 1...5)
+    }
+}
+
+let present: XmasPresent? = XmasPresent()
+
+if present == nil{
+    print("no present")
+}
+else{
+    // '!' is unwrappig object. When using it there is no type safe check. It's assumed that you now what is inside 
+    print("present: \(present!.surprise())")
+}
+
+if let actual_present = present {
+    // if present is not nil this code will run
+    print(actual_present.surprise())
+}
+
+
+// if present is not nil surprise will be executed
+present?.surprise()
